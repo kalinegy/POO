@@ -1,4 +1,4 @@
-class pessoa():
+class Pessoa():
     def __init__(self, peso, nome, idade):
         self.nome= nome
         self.peso= peso
@@ -55,5 +55,60 @@ class pessoa():
         if self.dormindo == True:
             print(f"{self.nome} tem que acordar")
             self.dormindo == False
+
+
+class ContaBancaria():
+    def __init__(self, num, nome, tipo):
+        self.num = num
+        self.nome = nome
+        self.tipo = tipo
+        self.saldo = 0
+        self.limite = 0
+        self.status= False
+
+
+    def ativarConta(self):
+        if self.status == False:
+            self.status = True
+            print("Conta ativada com sucesso!")
+        else:
+            print("Necessario ativar conta")
+
+    def depositar(self, deposito):
+        if self.status == False:
+            print("É necessário ativar a conta")
+        else:
+            print(f"O valor depositado foi de R$ {deposito}")
+
+    def sacar(self, saque):
+        if self.status == False:
+            print("É necessário ativar a conta")
+        else:
+            if self.limite + self.saldo < saque:
+                print("Não é possível sacar")
+            else:
+                self.saldo -=  saque
+                print(f"Seu saldo atual é de {self.saldo}")
+
+    def verificarSaldo(self):
+        if self.status == False:
+            print("É necessário ativar a conta")
+        else:
+            print(f"Seu saldo é {self.saldo}")
+
+    def ajustarLimite(self,limite):
+        if self.status == False:
+            print("É necessário ativar a conta")
+        else:
+            self.limite += limite
+            print(f"Seu limite foi ajustado para {self.limite}")
+
+
+
+
+
+
+
+
 
 
