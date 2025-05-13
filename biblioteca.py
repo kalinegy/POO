@@ -104,6 +104,43 @@ class ContaBancaria():
             print(f"Seu limite foi ajustado para {self.limite}")
 
 
+         #herença
+class Animal(): #superclasse
+    def __init__(self, nome, cor): #metodo construtor
+            self.nome= nome
+            self.cor= cor
+    def comer(self): #metodo
+            print(f"O/A {self.nome} foi comer...")
+
+class Gato(Animal):
+    def __init__(self, nome,cor):
+        super().__init__(nome,cor)
+    def miar(self):
+        print(f"O/A {self.nome} , de cor {self.cor} está miando...")
+
+class Vaca(Animal):
+    def __init__(self, nome,cor):
+        super().__init__(nome,cor)
+    def mugir(self):
+        print(f"A vaca chamada {self.nome} , de cor {self.cor} está mugindo...")
+    def comer(self):
+            print(f"A vaca {self.nome} está comendo capim...")
+
+class Coelho(Animal):
+    def __init__(self, nome,cor):
+        super().__init__(nome,cor)
+    def pular(self):
+        print(f"O coelhinho chamado {self.nome} , de pelo {self.cor} está pulando na fazenda...")
+
+class Cachorro(Animal):
+    def __init__(self, nome,cor):
+        super().__init__(nome,cor)
+    def latir(self):
+        print(f"O cachorro chamado {self.nome}, de cor {self.cor} está latindo...")
+
+
+
+
 
 
 
