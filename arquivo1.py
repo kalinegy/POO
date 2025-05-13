@@ -1,11 +1,7 @@
 from biblioteca import *
 
-aluno01= Pessoa(60, "Mônica", 16)
-aluno02= Pessoa(90, "Jonas", 50)
+ingresso= Ingresso(20)
+ingresso.imprimeValor()
 
-#atributos
-print(aluno02.nome)
-print(aluno01.nome)
-
-aluno02.comer("a")
-aluno02.dormir()
+ingressoVip= Vip(20)
+ingressoVip.imprimeValor()

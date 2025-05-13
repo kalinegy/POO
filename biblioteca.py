@@ -140,6 +140,19 @@ class Cachorro(Animal):
 
 
 
+class Ingresso(): #superclasse
+    def __init__(self, valor): #metodo construtor
+            self.valor=valor
+    def imprimeValor(self):
+            print(f"O valor do ingresso é {self.valor}")
+class Vip(Ingresso):
+    def __init__(self, valor):
+        super().__init__(valor)
+        self.valor *=1.5
+    def imprimeValor(self): #polimorfismo
+        print(f"O valor do seu ingresso VIP é de {self.valor}")
+
+
 
 
 
